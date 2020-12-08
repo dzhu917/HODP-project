@@ -1,0 +1,29 @@
+---
+title: "Visuals"
+author: "Diana Zhu"
+date: "10/31/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+## Introduction
+
+```{r}
+# read the data in
+data <- read.csv("upperclassmen_houses.csv")
+
+# delete the columns with dollar amount
+data$BuildingLabel <- data$X <- data$X.1 <- data$X.3 <- NULL
+
+upperclassmen %>% 
+  rename(id = course_id,
+         title = course_title,
+         name = course_name,
+         department = course_department) 
+
+```
+
